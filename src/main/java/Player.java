@@ -6,4 +6,16 @@ public class Player {
         name = n;
         piece = p;
     }
+
+    public void takeTurn(){
+        Die d = new Die();
+
+
+    }
+
+    public String getName(){
+        return name;
+    }
+
+
 }
