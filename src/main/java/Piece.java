@@ -4,6 +4,18 @@ public class Piece {
 
     public Piece(String n, Square s){
         name = n;
-        square = null;
+        square = s;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Square getSquare() {
+        return square;
+    }
+
+    public void setSquare(Square square) {
+        this.square = square;
     }
 }

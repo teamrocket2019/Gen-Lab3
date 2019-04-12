@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class Square {
     private String name;
 
@@ -7,6 +5,8 @@ public class Square {
         name = n;
     }
 
-
+    public String getName() {
+        return name;
+    }
 }
 
