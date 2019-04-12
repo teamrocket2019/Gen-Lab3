@@ -5,6 +5,7 @@ public class Player {
     public Player(String n, Board b){
         name = n;
         piece = new Piece("test", null);
+        
     }
 
     public void takeTurn(Die[] d,Board b){
