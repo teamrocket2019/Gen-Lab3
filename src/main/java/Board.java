@@ -11,4 +11,8 @@ public class Board {
             squares.add(new Square("Square "+ i));
         }
     }
+
+    public LinkedList<Square> getSquares() {
+        return squares;
+    }
 }
