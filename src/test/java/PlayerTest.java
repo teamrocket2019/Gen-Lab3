@@ -52,7 +52,7 @@ public class PlayerTest {
     public void aPlayerShouldBeAbleToChangeTheLocationOfTheirPiece(){
         Board b = new Board();
         Player p = new  Player("Hagoromo Lala", "Rocket", b.getSquare(null, 0));
-        p.selLocation(b.getSquare(null, 20));
+        p.setLocation(b.getSquare(null, 20));
         assertSame(b.getSquare(null, 20), p.getPiece().getSquare());
     }
 }

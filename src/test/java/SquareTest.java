@@ -6,7 +6,7 @@ public class SquareTest {
 
     @Test
     public void aSquareShouldHaveAName(){
-        Square s1 = new Square("Ceci est mon nom");
+        Square s1 = new RegularSquare("Ceci est mon nom");
         String s2 = "Ceci est mon nom";
         assertEquals(s1.getName(), s2);
     }

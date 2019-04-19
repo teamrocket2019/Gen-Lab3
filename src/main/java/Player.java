@@ -45,7 +45,12 @@ public class Player {
         this.cash -= cash;
     }
 
-    public void selLocation(Square s){
+    public void setLocation(Square s){
         piece.setSquare(s);
+        piece.getSquare().landedOn(this);
+    }
+
+    public Square getLocation() {
+        return piece.getSquare();
     }
 }

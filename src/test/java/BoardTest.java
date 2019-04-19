@@ -11,7 +11,14 @@ public class BoardTest {
         assertEquals("Go", testBoard.getSquare(null, 0).getName());
 
         for (int i = 1; i < 40; i++) {
-            assertEquals("Square " + i, testBoard.getSquare(null, i).getName());
+            switch (i) {
+                case 4:
+                    assertEquals("Tax Square " + i, testBoard.getSquare(null, i).getName());
+                    break;
+                default:
+                    assertEquals("Square " + i, testBoard.getSquare(null, i).getName());
+            }
+
         }
     }
 
