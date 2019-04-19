@@ -15,8 +15,8 @@ public class PlayerTest {
     public void turnTest() {
         Board b = new Board();
 
-        Player player = new Player("Yoann", "TopHat", b.getSquares().getFirst());
-        
+        Player player = new Player("Yoann", "TopHat", b.getSquare(null, 0));
+
         Die dieList[] = {new LoadedDie(), new LoadedDie()};
 
         player.takeTurn(dieList,b);

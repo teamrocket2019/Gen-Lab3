@@ -9,15 +9,15 @@ public class Player {
 
     public void takeTurn(Die[] d,Board b){
 
-        int value = b.getSquares().indexOf(piece.getSquare());
+        Square oldLoc = piece.getSquare();
+        int fvTot = 0;
 
         for(int i=0; i < d.length; i++) {
             d[i].roll();
-            value += d[i].getFaceValue();
+            fvTot += d[i].getFaceValue();
         }
 
-        Square nw  = b.getSquares().get(value);
-        piece.setSquare(nw);
+        piece.setSquare(b.getSquare(oldLoc,fvTot));
     }
 
     public String getName(){
