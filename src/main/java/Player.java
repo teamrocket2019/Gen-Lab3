@@ -20,7 +20,7 @@ public class Player {
         }
         System.out.println(name + " rolled a " + d[0].getFaceValue() + " and a " + d[1].getFaceValue());
 
-        piece.setSquare(b.getSquare(oldLoc,fvTot));
+        setLocation(b.getSquare(oldLoc,fvTot));
 
         System.out.println(name + " arrived on " + piece.getSquare().getName());
     }
