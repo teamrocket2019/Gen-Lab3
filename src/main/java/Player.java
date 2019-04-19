@@ -44,4 +44,8 @@ public class Player {
     public void reduceCash(int cash){
         this.cash -= cash;
     }
+
+    public void selLocation(Square s){
+        piece.setSquare(s);
+    }
 }
