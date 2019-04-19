@@ -6,7 +6,7 @@ public class PlayerTest {
 
     @Test
     public void NameTest(){
-        Player p = new Player("Robel", new Piece("p1",null));
+        Player p = new Player("Robel", "p1",null);
 
         assertEquals(p.getName(), "Robel");
     }
