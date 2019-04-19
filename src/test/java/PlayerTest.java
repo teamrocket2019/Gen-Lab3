@@ -23,4 +23,27 @@ public class PlayerTest {
 
         assertEquals("Square 12", player.getPiece().getSquare().getName());
     }
+
+    @Test
+    public void aPlayerShouldBeginTheGameWith1500Dollars(){
+        Board b = new Board();
+        Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
+        assertEquals(1500, p.getNetWorth());
+    }
+
+    @Test
+    public void aPlayerShouldLooseDollarInTheGame(){
+        Board b = new Board();
+        Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
+        p.reduceCash(200);
+        assertEquals(1300, p.getNetWorth());
+    }
+
+    @Test
+    public void aPlayerShouldGainDollarInTheGame(){
+        Board b = new Board();
+        Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
+        p.addCash(200);
+        assertEquals(1700, p.getNetWorth());
+    }
 }
