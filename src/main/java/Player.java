@@ -1,10 +1,12 @@
 public class Player {
     private String name;
     private Piece piece;
+    private int cash;
 
     public Player(String playerName, String pieceName, Square start){
         name = playerName;
         piece = new Piece(pieceName, start);
+        cash = 1500;
     }
 
     public void takeTurn(Die[] d,Board b){
@@ -29,5 +31,17 @@ public class Player {
 
     public Piece getPiece() {
         return piece;
+    }
+
+    public int getNetWorth(){
+        return cash;
+    }
+
+    public void addCash(int cash){
+        this.cash += cash;
+    }
+
+    public void reduceCash(int cash){
+        this.cash -= cash;
     }
 }
