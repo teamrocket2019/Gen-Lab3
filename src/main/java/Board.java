@@ -12,7 +12,12 @@ public class Board {
         }
     }
 
-    public LinkedList<Square> getSquares() {
-        return squares;
+    public Square getSquare(Square oldLoc, int fvTot) {
+        int i = 0;
+        for(Square sq : squares){
+            if(sq.equals(oldLoc)) break;
+            ++i;
+        }
+        return squares.get((i + fvTot) % squares.size());
     }
 }
