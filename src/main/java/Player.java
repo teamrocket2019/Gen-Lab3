@@ -16,7 +16,7 @@ public class Player {
             d[i].roll();
             fvTot += d[i].getFaceValue();
         }
-        System.out.println(name + " rolled a " + d[1].getFaceValue() + " and a " + d[2].getFaceValue());
+        System.out.println(name + " rolled a " + d[0].getFaceValue() + " and a " + d[1].getFaceValue());
 
         piece.setSquare(b.getSquare(oldLoc,fvTot));
 
