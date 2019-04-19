@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class PlayerTest {
 
@@ -45,5 +46,13 @@ public class PlayerTest {
         Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
         p.addCash(200);
         assertEquals(1700, p.getNetWorth());
+    }
+
+    @Test
+    public void aPlayerShouldBeAbleToChangeTheLocationOfTheirPiece(){
+        Board b = new Board();
+        Player p = new  Player("Hagoromo Lala", "Rocket", b.getSquare(null, 0));
+        p.selLocation(b.getSquare(null, 20));
+        assertSame(b.getSquare(null, 20), p.getPiece().getSquare());
     }
 }
