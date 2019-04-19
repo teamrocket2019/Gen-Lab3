@@ -21,4 +21,11 @@ public class BoardTest {
 
         assertEquals("Square 39", testBoard.getSquare(null, 39).getName());
     }
+
+    @Test
+    public void theGetSquareFonctionCanDoCircle(){
+        Board testBoard = new Board();
+
+        assertNotNull(testBoard.getSquare(null, 666));
+    }
 }
