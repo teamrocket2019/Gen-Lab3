@@ -9,6 +9,8 @@ class IncomeTaxSquareTest {
         Board board = new Board();
         Player player = new Player("Yoann", "Shoe", board.getSquare(null, 0));
 
+        player.setLocation(board.getSquare(player.getLocation(), 4));
 
+        assertEquals(1350, player.getNetWorth());
     }
 }
