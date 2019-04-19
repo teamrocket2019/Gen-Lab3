@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MonopolyGameTest {
 
-    /*@ParameterizedTest
-    @ValueSource(ints = {1, 3, 5, 8})
+    @ParameterizedTest
+    @ValueSource(ints = {2, 3, 5, 8})
     public void aMonopolyGameShouldBePlayed(int nbPlayer) {
         MonopolyGame mg = new MonopolyGame(nbPlayer);
         mg.playGame();
-    }*/
+    }
 
     @Test
     public void aMonopolyCannotBePlayedAlone(){
