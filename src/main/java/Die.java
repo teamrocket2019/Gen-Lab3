@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Die {
-    private int faceValue;
+    protected int faceValue;
 
     public Die(){
         roll();
