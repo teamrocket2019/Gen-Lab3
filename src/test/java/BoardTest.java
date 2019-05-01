@@ -1,5 +1,7 @@
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,11 +29,12 @@ public class BoardTest {
         }
     }
 
-    @Test
-    public void BoardNumberTest(){
+    @ParameterizedTest
+    @ValueSource(ints = 39)
+    public void BoardNumberTest(int i){
         Board testBoard = new Board();
 
-        assertEquals("Regular Square 39", testBoard.getSquare(null, 39).getName());
+        assertEquals("Regular Square 39", testBoard.getSquare(null, i).getName());
     }
 
     @Test
