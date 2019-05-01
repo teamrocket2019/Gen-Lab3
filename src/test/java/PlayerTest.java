@@ -22,7 +22,7 @@ public class PlayerTest {
 
         player.takeTurn(dieList,b);
 
-        assertEquals("Square 12", player.getPiece().getSquare().getName());
+        assertEquals("Regular Square 12", player.getPiece().getSquare().getName());
     }
 
     @Test

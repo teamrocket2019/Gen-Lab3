@@ -15,8 +15,13 @@ public class BoardTest {
                 case 4:
                     assertEquals("Tax Square " + i, testBoard.getSquare(null, i).getName());
                     break;
+
+                case 30:
+                    assertEquals("Go to Jail " + i, testBoard.getSquare(null,i).getName());
+                    break;
+
                 default:
-                    assertEquals("Square " + i, testBoard.getSquare(null, i).getName());
+                    assertEquals("Regular Square " + i, testBoard.getSquare(null, i).getName());
             }
 
         }
@@ -26,7 +31,7 @@ public class BoardTest {
     public void BoardNumberTest(){
         Board testBoard = new Board();
 
-        assertEquals("Square 39", testBoard.getSquare(null, 39).getName());
+        assertEquals("Regular Square 39", testBoard.getSquare(null, 39).getName());
     }
 
     @Test

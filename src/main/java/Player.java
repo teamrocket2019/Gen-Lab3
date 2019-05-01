@@ -23,7 +23,8 @@ public class Player {
 
         setLocation(b.getSquare(oldLoc,fvTot));
 
-        System.out.println(name + " arrived on " + piece.getSquare().getName());
+    System.out.println(name + " arrived on " + piece.getSquare().getName() + " and possesses " +
+            cash);
     }
 
     public String getName(){

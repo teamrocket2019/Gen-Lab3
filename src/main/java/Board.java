@@ -14,9 +14,9 @@ public class Board {
                     break;
 
                 case 30:
-                    squares.add(new GoToJailSquare("Go to Jail", squares.get(10)));
+                    squares.add(new GoToJailSquare("Go to Jail " + i, squares.get(10)));
                     break;
-                    
+
                 default:
                     squares.add(new RegularSquare("Regular Square "+ i));
             }
