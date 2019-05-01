@@ -3,6 +3,7 @@ public class Player {
     private Piece piece;
     private int cash;
 
+
     public Player(String playerName, String pieceName, Square start){
         name = playerName;
         piece = new Piece(pieceName, start);
@@ -22,7 +23,8 @@ public class Player {
 
         setLocation(b.getSquare(oldLoc,fvTot));
 
-        System.out.println(name + " arrived on " + piece.getSquare().getName());
+    System.out.println(name + " arrived on " + piece.getSquare().getName() + " and possesses " +
+            cash);
     }
 
     public String getName(){
