@@ -1,3 +1,5 @@
+package Die;
+
 import org.junit.jupiter.api.RepeatedTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

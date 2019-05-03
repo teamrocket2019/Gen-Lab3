@@ -1,3 +1,6 @@
+package Board;
+
+import Player.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,6 +14,6 @@ class IncomeTaxSquareTest {
 
         player.setLocation(board.getSquare(player.getLocation(), 4));
 
-        assertEquals(1350, player.getNetWorth());
+        assertEquals(1300, player.getNetWorth());
     }
 }

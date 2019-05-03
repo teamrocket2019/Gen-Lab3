@@ -1,4 +1,8 @@
-public class RegularSquare extends Square{
+package Board;
+import Player.*;
+
+
+public class RegularSquare extends Square {
 
     public RegularSquare(String n) {
         super(n);

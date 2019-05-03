@@ -1,4 +1,8 @@
-public class GoSquare extends Square{
+package Board;
+import Player.*;
+
+
+public class GoSquare extends Square {
     int goCash = 200;
 
     public GoSquare(String n) {

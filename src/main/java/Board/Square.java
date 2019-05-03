@@ -1,3 +1,7 @@
+package Board;
+
+import Player.*;
+
 public abstract class Square {
     private String name;
 

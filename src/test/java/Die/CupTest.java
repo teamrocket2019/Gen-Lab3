@@ -1,6 +1,8 @@
+package Die;
+
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,6 +20,6 @@ public class CupTest {
 
     @BeforeEach
     public void initEach(){
-        System.out.println("Test Cup number " + counter++);
+        System.out.println("Test Die.Cup number " + counter++);
     }
 }
