@@ -1,3 +1,5 @@
+package Board;
+
 import java.util.LinkedList;
 
 public class Board {
@@ -10,7 +12,7 @@ public class Board {
         for(int i = 1; i < 40; i ++){
             switch (i) {
                 case 4:
-                    squares.add(new IncomeTaxSquare("Tax Square " + i));
+                    squares.add(new IncomeTaxSquare("Tax Board.Square " + i));
                     break;
 
                 case 30:
@@ -18,7 +20,7 @@ public class Board {
                     break;
 
                 default:
-                    squares.add(new RegularSquare("Regular Square "+ i));
+                    squares.add(new RegularSquare("Regular Board.Square "+ i));
             }
 
         }

@@ -1,3 +1,7 @@
+package Die;
+
+import Die.Die;
+
 public class LoadedDie extends Die {
     public LoadedDie() {
         super();

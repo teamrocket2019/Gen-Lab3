@@ -1,18 +1,22 @@
+import Board.Board;
+import Die.*;
+import Player.Player;
+
 import java.util.LinkedList;
 
 public class MonopolyGame {
-    private Die[] dice;
+    private Cup cup;
     private Board board;
     private LinkedList<Player> players;
 
     public MonopolyGame(int nbPlayer){
         if(nbPlayer < 2 || nbPlayer > 8) throw new IllegalArgumentException("You can't play alone this game");
-        dice = new Die[]{new Die(), new Die()};
+        cup = new Cup(new Die(), new Die());
         board = new Board();
         players = new LinkedList<>();
         for(int i = 0; i < nbPlayer; ++i){
             players.add(
-                    new Player("Player" + i, "Piece" + i, board.getSquare(null, 0)));
+                    new Player("Player" + i, "Player.Piece" + i, board.getSquare(null, 0)));
         }
     }
 
@@ -24,6 +28,6 @@ public class MonopolyGame {
     }
 
     public void playRound(Player p){
-        p.takeTurn(dice, board);
+        p.takeTurn(cup, board);
     }
 }

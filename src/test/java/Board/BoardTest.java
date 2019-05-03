@@ -1,3 +1,4 @@
+package Board;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,7 +16,7 @@ public class BoardTest {
         for (int i = 1; i < 40; i++) {
             switch (i) {
                 case 4:
-                    assertEquals("Tax Square " + i, testBoard.getSquare(null, i).getName());
+                    assertEquals("Tax Board.Square " + i, testBoard.getSquare(null, i).getName());
                     break;
 
                 case 30:
@@ -23,7 +24,7 @@ public class BoardTest {
                     break;
 
                 default:
-                    assertEquals("Regular Square " + i, testBoard.getSquare(null, i).getName());
+                    assertEquals("Regular Board.Square " + i, testBoard.getSquare(null, i).getName());
             }
 
         }
@@ -34,7 +35,7 @@ public class BoardTest {
     public void BoardNumberTest(int i){
         Board testBoard = new Board();
 
-        assertEquals("Regular Square 39", testBoard.getSquare(null, i).getName());
+        assertEquals("Regular Board.Square 39", testBoard.getSquare(null, i).getName());
     }
 
     @Test

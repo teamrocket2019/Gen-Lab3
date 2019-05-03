@@ -1,3 +1,7 @@
+package Board;
+import Player.*;
+
+
 public class IncomeTaxSquare extends Square {
     public IncomeTaxSquare(String n) {
         super(n);
@@ -5,6 +9,6 @@ public class IncomeTaxSquare extends Square {
 
     @Override
     public void landedOn(Player player) {
-        player.reduceCash((int) Math.round(Math.min(200, player.getNetWorth() * 0.1)));
+        player.reduceCash((int) Math.round(Math.max(200, player.getNetWorth() * 0.1)));
     }
 }

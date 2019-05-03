@@ -1,3 +1,7 @@
+package Player;
+
+import Board.*;
+import Die.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,24 +22,23 @@ public class PlayerTest {
 
         Player player = new Player("Yoann", "TopHat", b.getSquare(null, 0));
 
-        Die dieList[] = {new LoadedDie(), new LoadedDie()};
+        Cup cup = new Cup(new LoadedDie(), new LoadedDie());
+        player.takeTurn(cup,b);
 
-        player.takeTurn(dieList,b);
-
-        assertEquals("Regular Square 12", player.getPiece().getSquare().getName());
+        assertEquals("Regular Board.Square 12", player.getPiece().getSquare().getName());
     }
 
     @Test
     public void aPlayerShouldBeginTheGameWith1500Dollars(){
         Board b = new Board();
-        Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
+        Player p = new Player("Julien", "Player.Piece", b.getSquare(null, 0));
         assertEquals(1500, p.getNetWorth());
     }
 
     @Test
     public void aPlayerShouldLooseDollarInTheGame(){
         Board b = new Board();
-        Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
+        Player p = new Player("Julien", "Player.Piece", b.getSquare(null, 0));
         p.reduceCash(200);
         assertEquals(1300, p.getNetWorth());
     }
@@ -43,7 +46,7 @@ public class PlayerTest {
     @Test
     public void aPlayerShouldGainDollarInTheGame(){
         Board b = new Board();
-        Player p = new Player("Julien", "Piece", b.getSquare(null, 0));
+        Player p = new Player("Julien", "Player.Piece", b.getSquare(null, 0));
         p.addCash(200);
         assertEquals(1700, p.getNetWorth());
     }
